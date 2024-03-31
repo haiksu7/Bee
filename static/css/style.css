@@ -1,0 +1,96 @@
+form.login_form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    background-color: #fbceb1;
+    border: 5px solid gray;
+    border-radius: 5px;
+    padding: 30px;
+}
+body {
+    align-items: center;
+    max-width: 1200px;
+    padding: 0;
+    margin: auto;
+    color: #060606;
+    font-size: 15px;
+    background-image: url("/static/img/соты.jpg");
+}
+.avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+nav {
+    background-color: #ffb92e;
+    height: 50px;
+    border-radius: 10px;
+    margin: 5px
+}
+a {
+    color: black;
+}
+a:hover {
+    text-decoration: underline
+}
+a:active {
+   color: orange;
+}
+header {
+    height: 100px;
+}
+.fixed-cont {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    background-color: #fbceb1 ;
+ }
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section {
+    background-color: white;
+    margin: 20px auto;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: black;
+    padding: 20px;
+
+}
+section.scrollmenu {
+    display: flex;
+    justify-content: space-between
+}
+section.scrollmenu a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #fcad0f;
+  border-radius: 10px;
+  padding: 7px;
+}
+
+section.scrollmenu a:hover {
+  background-color: #fcad0f;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+b {
+  background-color: #fcad0f;
+}
+.carousel-inner img {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+}
+.carousel-indicators button {
+    margin-right: 5px;
+}
+.carousel-item div {
+    color: black;
+}
