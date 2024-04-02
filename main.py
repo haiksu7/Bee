@@ -70,9 +70,7 @@ def login():
 def index():
     with open('db/avatars.txt', mode='r', encoding='utf8') as f:
         photo = str(f.readline())
-    if not photo:
-        photo = 'ava.webp'
-    return render_template("main.html", photo=f'static/img/{photo}')
+    return render_template("main.html", photo=f'static/img/{photo}', title='"Пчёлки" Детский сад и Семейный Клуб')
 
 
 @app.route('/logout')
@@ -83,23 +81,93 @@ def logout():
 
 @app.route('/Короткий_день')
 def short():
-    return render_template("short.html")
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("short.html", photo=f'static/img/{photo}', title='Детский сад короткого дня')
 
 @app.route('/Полный_день')
 def full():
-    return render_template("full.html")
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("full.html", photo=f'static/img/{photo}', title='Детский сад полного дня')
 
 @app.route('/Правила_посещения')
 def rules():
-    return render_template("rules.html")
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("rules.html", photo=f'static/img/{photo}', title='Правила посещения детского сада')
 
 @app.route('/Семейный_клуб')
 def club():
-    return render_template("club.html")
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("club.html", photo=f'static/img/{photo}', title='Семейный клуб | Доп.занятия')
 
 @app.route('/Танцы')
 def dance():
-    return render_template("dance.html")
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("dance.html", photo=f'static/img/{photo}', title='Танцевальная студия')
+
+@app.route('/ИЗО')
+def draw():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("draw.html", photo=f'static/img/{photo}', title='ИЗО студия')
+
+@app.route('/Дошколята')
+def doshkol():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("doshkol.html", photo=f'static/img/{photo}', title='Дошколята')
+
+@app.route('/Логопед')
+def logoped():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("logoped.html", photo=f'static/img/{photo}', title='Логопед-дефектолог')
+
+@app.route('/Программирование')
+def scratch():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("scratch.html", photo=f'static/img/{photo}', title='Программирование Scratch Junior')
+
+@app.route('/Робототехника')
+def roboto():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("roboto.html", photo=f'static/img/{photo}', title='Робототехника')
+
+@app.route('/День_рождения')
+def birth():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("birth.html", photo=f'static/img/{photo}', title='День рождения')
+
+@app.route('/Тхэквондо')
+def tek():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("teknchess.html", photo=f'static/img/{photo}', title='Тхэквондо')
+
+@app.route('/Тхэквондо')
+def chess():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("teknchess.html", photo=f'static/img/{photo}', title='Шахматы')
+
+@app.route('/Академический_рисунок')
+def academ():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("academ.html", photo=f'static/img/{photo}', title='Академический рисунок')
+
+@app.route('/Мастерилка')
+def masterilka():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("masterilka.html", photo=f'static/img/{photo}', title='Мастерилка')
 
 def main():
     db_session.global_init("db/users.sqlite")

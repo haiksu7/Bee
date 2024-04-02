@@ -94,3 +94,19 @@ b {
 .carousel-item div {
     color: black;
 }
+.icon {
+  border-radius: 50%;
+}
+mark {
+   background-color: #fcad0f;
+}
+.orange-text {
+    color: #fcad0f;
+}
+i {
+  text-decoration: overline underline #fcad0f solid 1px
+}
+.dop {
+  max-width: 50%;
+
+}
