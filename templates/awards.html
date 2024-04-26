@@ -1,0 +1,15 @@
+{% extends "club.html" %}
+
+{% block content %}
+<meta charset="UTF-8">
+{% for i in range(1, 23) %}
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{url_for('static', filename='img/awards/award' ~ i ~ '.jpg')}}">
+      <img src="{{url_for('static', filename='img/awards/award' ~ i ~ '.jpg')}}">
+    </a>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
