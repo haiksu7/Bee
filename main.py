@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request
 from flask_login import LoginManager, login_user, login_required, logout_user
 
-
+import os
 from data import db_session
 from data.register import RegisterForm
 from data.login_form import LoginForm
@@ -151,7 +151,7 @@ def tek():
         photo = str(f.readline())
     return render_template("teknchess.html", photo=f'static/img/{photo}', title='Тхэквондо')
 
-@app.route('/Тхэквондо')
+@app.route('/Шахматы')
 def chess():
     with open('db/avatars.txt', mode='r', encoding='utf8') as f:
         photo = str(f.readline())
@@ -168,6 +168,36 @@ def masterilka():
     with open('db/avatars.txt', mode='r', encoding='utf8') as f:
         photo = str(f.readline())
     return render_template("masterilka.html", photo=f'static/img/{photo}', title='Мастерилка')
+
+@app.route('/Отзывы')
+def response():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("response.html", photo=f'static/img/{photo}', title='Отзывы')
+
+@app.route('/Сотрудники')
+def employee():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("employee.html", photo=f'static/img/{photo}', title='Сотрудники')
+
+@app.route('/Достижения')
+def awards():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("awards.html", photo=f'static/img/{photo}', title='Достижения')
+
+@app.route('/Галерея')
+def gallery():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("gallery.html", photo=f'static/img/{photo}', title='Галерея')
+
+@app.route('/Контакты')
+def contact():
+    with open('db/avatars.txt', mode='r', encoding='utf8') as f:
+        photo = str(f.readline())
+    return render_template("contact.html", photo=f'static/img/{photo}', title='Контакты')
 
 def main():
     db_session.global_init("db/users.sqlite")
