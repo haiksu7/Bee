@@ -62,8 +62,7 @@ section {
 
 }
 section.scrollmenu {
-    display: flex;
-    justify-content: space-between
+    justify-content: center;
 }
 section.scrollmenu a {
   display: inline-block;
@@ -72,9 +71,14 @@ section.scrollmenu a {
   border: 1px solid #fcad0f;
   border-radius: 10px;
   padding: 7px;
+  margin: 10px;
 }
 section.scrollmenu a:hover {
   background-color: #fcad0f;
+}
+.dropdown-menu {
+  padding: 20px;
+  margin: -15px;
 }
 .dropdown {
     position: relative;
@@ -243,4 +247,8 @@ div.desc {
 }
 b {
   color: #fcad0f;
+}
+.sota {
+  max-width: 20%;
+  margin: 20px;
 }
