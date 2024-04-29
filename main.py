@@ -1,7 +1,6 @@
 from flask import Flask, render_template, redirect, request
 from flask_login import LoginManager, login_user, login_required, logout_user
 
-import os
 from data import db_session
 from data.register import RegisterForm
 from data.login_form import LoginForm
